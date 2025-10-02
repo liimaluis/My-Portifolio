@@ -1,0 +1,36 @@
+.spacer {
+    flex: 1 1 auto;
+  }
+  
+  .desktop-links {
+    display: flex;
+  }
+  
+  .menu-button {
+    display: none;
+    color: white;
+  }
+  
+
+  a {
+    color: black;
+    margin-left: 15px;
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    .desktop-links {
+      display: none;
+    }
+    .menu-button {
+      display: inline-flex;
+    }
+    .mobile-sidenav a.mat-list-item {
+      color: black;
+      font-size: 18px;
+      padding: 10px;
+      display: block;
+      text-decoration: none;
+    }
+  }
+  
