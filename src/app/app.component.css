@@ -16,7 +16,128 @@
     color: black;
     margin-left: 15px;
   }
+
+  .sobre-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    color: white;
+    background-color: black;
+    min-height: 100vh;
+  }
   
+  .sobre-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+    gap: 40px;
+  }
+  
+  .sobre-foto img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffcc00;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  
+  .sobre-texto {
+    flex: 1;
+  }
+  
+  .nome {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .cargo {
+    font-size: 1.5rem;
+    color: #ffcc00;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    border-right: 3px solid #ffcc00;
+    overflow: hidden;
+  }
+  
+  /* Animação de digitação */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  /* Aplica a animação */
+  .typewriter {
+    animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+  }
+  
+  .descricao {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .projetos-section {
+    padding: 100px 20px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+  }
+  
+  .titulo {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .projetos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .projeto-card {
+    background-color: #121212;
+    color: #fff;
+    border: 1px solid #333;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .projeto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+  }
+  
+  mat-card-content h2 {
+    margin: 10px 0 5px;
+    font-size: 1.3rem;
+  }
+  
+  mat-card-content p {
+    color: #bbb;
+    font-size: 0.95rem;
+  }
+  
+  mat-card-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 16px;
+  }
   
   @media screen and (max-width: 768px) {
     .desktop-links {
@@ -31,6 +152,19 @@
       padding: 10px;
       display: block;
       text-decoration: none;
+    }
+    .sobre-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .sobre-foto img {
+      width: 220px;
+      height: 220px;
+    }
+  
+    .cargo {
+      margin: 0 auto 20px;
     }
   }
   
