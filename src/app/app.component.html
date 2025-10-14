@@ -1,34 +1,38 @@
-<mat-sidenav-container class="sidenav-container" style="height: 100vh; background-color: black;">
+<mat-sidenav-container class="sidenav-container">
   <!-- Sidenav para mobile -->
   <mat-sidenav #sidenav mode="over" class="mobile-sidenav">
-    <a mat-list-item routerLink="#sobre" (click)="sidenav.close()">Sobre mim</a>
-    <a mat-list-item routerLink="#projetos" (click)="sidenav.close()">Projetos</a>
-    <a mat-list-item routerLink="#experiencias" (click)="sidenav.close()">Experiências profissionais</a>
+    <a mat-list-item href="#sobre" (click)="sidenav.close()">Sobre mim</a>
+    <a mat-list-item href="#projetos" (click)="sidenav.close()">Projetos</a>
+    <a mat-list-item href="#Conhecimentos" (click)="sidenav.close()">Conhecimentos</a>
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar class="custom-toolbar">
       <button mat-icon-button (click)="sidenav.toggle()" class="menu-button">
         <mat-icon>menu</mat-icon>
       </button>
+
       <span class="logo">Meu Portfólio</span>
       <span class="spacer"></span>
 
       <!-- Links desktop -->
       <nav class="desktop-links">
-        <a mat-button href="#sobre">Sobre mim</a>
+        <a mat-button href="#sobremim">Sobre mim</a>
         <a mat-button href="#projetos">Projetos</a>
-        <a mat-button href="#Conhecimentos">Experiências profissionais</a>
+        <a mat-button href="#Conhecimentos">Conhecimentos</a>
+        <a mat-stroked-button color="primary" class="contact-btn" href="#sobre">
+          Contato
+        </a>
       </nav>
     </mat-toolbar>
 
-    <section id="sobre" class="sobre-section">
-      <div class="sobre-container">
-        <div class="sobre-foto">
+    <section id="apresentacao" class="apresentacao-section">
+      <div class="apresentacao-container">
+        <div class="apresentacao-foto">
           <img src="assets/imgs/eu.jpg" alt="Minha Foto" />
         </div>
     
-        <div class="sobre-texto">
+        <div class="apresentacao-texto">
           <h1 class="nome">Luis Henrique</h1>
           <h2 class="cargo" id="cargo">Desenvolvedor Full Stack</h2>
           <p class="descricao">
@@ -39,42 +43,103 @@
       </div>
     </section>
 
+    <section id="sobremim" class="sobremim-section">
+      <div class="sobremim-container">
+        <div class="foto-programação">
+          <img src="assets/imgs/fotoprogramacao.jpg" alt="Foto Porgramação" />
+        </div>
+    
+        <div class="sobremim-texto">
+          <h1 class="sobremim">Sobre mim</h1>
+          <p class="descricaosobre">
+              Olá, meu nome é Luis Henrique e sou Desenvolvedor Full Stack, já atuei em projetos como freelancer e em posições registradas. 
+              Já trabalhei em diversos tipos de sistemas, incluindo PROTHEUS, B2B, C2B e Backoffice, 
+              utilizando linguagens e frameworks como PHP, Laravel, ADVPL, C# com .NET e JavaScript, 
+              com a utilização dos principios do SOLID para uma arquitetura mais limpa . 
+              Também tenho experiência com bancos de dados como MySQL, MongoDB e PostgreSQL.
+          </p>
+
+          <p>
+
+              Durante minha trajetória, desenvolvi fluxogramas de aprovação utilizando Fluig e trabalhei em equipes que adotavam versionamento de código com GitHub e GitLab.
+
+              Tenho conhecimento e experiência em metodologias ágeis, como Scrum e Kanban. 
+
+              Princípios, padrões e arquiteturas: SOLID, Design Patterns, MVC e Clean Architecture.
+
+          </p>
+
+          <p>
+
+              Minhas competências técnicas incluem:
+
+              Linguagens e Frameworks: JavaScript, PHP, C#, .NET, ASP.NET Core, Node.js, Express, React.js, Bootstrap, ADVPL.
+              Banco de Dados: MySQL, MongoDB, PostgreSQL.
+              Outros: HTML, CSS, GIT, Docker, AWS(S3, EC2, RDS), AZURE
+          </p>
+
+        <div class="redes">
+            <h3>Redes Utilizadas</h3>
+            <div class="redes-icons">
+              <a href="https://github.com/liimaluis" target="_blank">
+                <img alt="Luis-GitHub" height="30" width="40"
+                     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
+              </a>
+
+              <a href="https://www.linkedin.com/in/luis-henrique-3b2698159/" target="_blank">
+                <img alt="Luis-LinkedIn" height="30" width="40"
+                     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" />
+              </a>
+              
+              <div class="email-info">
+                <img class="email-icon" src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="email" />
+                <span>luish6629&#64;gmail.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="projetos" class="projetos-section">
       <h1>Projetos</h1>
       <div class="projetos-container">
         <mat-card class="projeto-card" appearance="outlined">
-          <img mat-card-image src="https://material.angular.dev/assets/img/examples/shiba2.jpg" alt="Projeto 1">
+          <img mat-card-image src="assets/imgs/apicleanarch.jpeg" alt="Projeto Clean-Architecture">
           <mat-card-content>
-            <h2>Gestor Financeiro</h2>
-            <p>Aplicação web para controle de despesas e receitas com gráficos e relatórios interativos.</p>
+            <h2>CleanArchMvc</h2>
+            <p>O CleanArchMvc é uma aplicação desenvolvida em C# utilizando ASP.NET Core que implementa os princípios da Clean Architecture e do SOLID com a arquitetura MVC (Model-View-Controller). 
+              O projeto contém uma versão visual do site, permitindo gerenciar categorias e produtos, além de uma API REST segura para operações externas com a utilização do token jwt.
+            </p>
           </mat-card-content>
           <mat-card-actions>
-            <button mat-button color="primary">Ver Projeto</button>
-            <button mat-button color="accent"><a href="#sobre">GitHub</a></button>
+            <button mat-button color="accent"><a href="https://github.com/liimaluis/Clean-Architecture">GitHub</a></button>
           </mat-card-actions>
         </mat-card>
     
         <mat-card class="projeto-card" appearance="outlined">
-          <img mat-card-image src="https://material.angular.dev/assets/img/examples/shiba2.jpg" alt="Projeto 2">
+          <img mat-card-image src="assets/imgs/projetopeformance.jpeg" alt="Projeto Performance">
           <mat-card-content>
-            <h2>Portfólio Profissional</h2>
-            <p>Meu portfólio pessoal desenvolvido em Angular com Angular Material e design responsivo.</p>
+            <h2>Projeto Performance</h2>
+            <p>Um dos meus primeiros projeto freelancers, sendo uma página web com um front-end estruturado em react a partir de componentes, 
+              sendo integrado a uma api no qual foi densenvolvida em nodejs com o banco de dados não relacional para o salvamento de dados, nos quais são enviados via formulário
+            </p>
           </mat-card-content>
           <mat-card-actions>
-            <button mat-button color="primary">Ver Projeto</button>
-            <button mat-button color="accent"><a href="#sobre">GitHub</a></button>
+            <button mat-button color="accent"><a href="https://github.com/liimaluis/Performance">GitHub</a></button>
           </mat-card-actions>
         </mat-card>
     
         <mat-card class="projeto-card" appearance="outlined">
-          <img mat-card-image src="https://material.angular.dev/assets/img/examples/shiba2.jpg" alt="Projeto 3">
+          <img mat-card-image src="assets/imgs/apinode.png" alt="Projeto ApiNode com autenticação token jwt">
           <mat-card-content>
-            <h2>API de Produtos</h2>
-            <p>API RESTful desenvolvida em C# com MongoDB e autenticação JWT.</p>
+            <h2>API e-commerce</h2>
+            <p>API feita para e-commerce com rotas autenticadas com Token JWT.
+               Utilizando Node Js e banco de dados MYSQL rodando em container no docker
+            </p>
           </mat-card-content>
           <mat-card-actions>
-            <button mat-button color="primary">Ver Projeto</button>
-            <button mat-button color="accent"><a href="#sobre">GitHub</a></button>
+            <button mat-button color="accent"><a href="https://github.com/liimaluis/API-REST">GitHub</a></button>
           </mat-card-actions>
         </mat-card>
       </div>
@@ -95,6 +160,10 @@
             <img align="center" alt="Luis-Csharp" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
             <img align="center" alt="Luis-Dotnet" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg" />
             <img align="center" alt="Luis-Linux" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" />
+            <img align="center" alt="Luis-Angular" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original-wordmark.svg" />
+            <img align="center" alt="Luis-Amazon" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" />
+            <img align="center" alt="Luis-AzureDevops" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuredevops/azuredevops-original.svg" />
+            <img align="center" alt="Luis-GitLab" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg" />
       </div>
     </section>
 
