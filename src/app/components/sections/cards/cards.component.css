@@ -1,0 +1,44 @@
+
+  .projetos-section {
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .projetos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .projeto-card {
+    background-color: #121212;
+    color: #fff;
+    border: 1px solid #333;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .projeto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+  }
+  
+  mat-card-content h2 {
+    margin: 10px 0 5px;
+    font-size: 1.3rem;
+  }
+  
+  mat-card-content p {
+    color: #bbb;
+    font-size: 0.95rem;
+  }
+  
+  mat-card-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 16px;
+  }

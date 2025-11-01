@@ -1,0 +1,89 @@
+.sidenav-container {
+  height: 8dvh;
+  background-color: black;
+}
+
+.custom-toolbar {
+  background-color: white;
+  color: black;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+
+.logo {
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+
+.desktop-links a {
+  color: black;
+  font-weight: 500;
+  margin: 0 10px;
+  text-transform: none;
+  transition: color 0.3s ease;
+}
+
+.desktop-links a:hover {
+  color: #ffcc00;
+}
+
+.contact-btn {
+  background-color: #ffcc00;
+  color: white !important;
+  border: none;
+  border-radius: 20px;
+  padding: 4px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #ffcc00;
+}
+
+
+.menu-button {
+  display: none;
+}
+
+.mobile-sidenav {
+  background-color: white;
+  padding: 20px;
+}
+
+.mobile-sidenav a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  padding: 10px 0;
+}
+
+@media screen and (max-width: 768px) { 
+
+    .desktop-links {
+      display: none;
+    }
+    .menu-button {
+      display: inline-flex;
+    }
+    .mobile-sidenav a.mat-list-item {
+      color: black;
+      font-size: 18px;
+      padding: 10px;
+      display: block;
+      text-decoration: none;
+    }
+
+}
