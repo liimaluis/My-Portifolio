@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CATEGORIAS } from '../conhecimentos/conhecimento.data'
 
 @Component({
   selector: 'app-conhecimentos',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './conhecimentos.component.css'
 })
 export class ConhecimentosComponent {
-
+ categorias = CATEGORIAS
 }
