@@ -7,7 +7,7 @@ import { MYPORTIFOLIO } from '../../portifolio.data';
   standalone: true,
   imports: [MatCardModule],
   templateUrl: './cards.component.html',
-  styleUrls: ['./cards.component.css'] // ✅ plural e array
+  styleUrls: ['./cards.component.css'] 
 })
 export class CardsComponent {
   projetos = MYPORTIFOLIO;

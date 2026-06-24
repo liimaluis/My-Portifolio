@@ -17,7 +17,7 @@ export class ApresentacaoComponent implements AfterViewInit{
     const element = document.getElementById('cargo');
     if (!element) return;
 
-    const text = 'Desenvolvedor Full Stack';
+    const text = 'Bem vindo ao meu portifólio!';
     let index = 0;
 
     const typing = () => {
