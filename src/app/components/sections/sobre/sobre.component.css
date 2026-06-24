@@ -197,7 +197,16 @@
 }
 
 .email {
+  text-decoration: none;
   color: #cfcfcf;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.email-icon {
+    width: 24px;
+    height: 24px;
 }
 
 @media (max-width: 768px) {
