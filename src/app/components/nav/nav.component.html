@@ -1,28 +1,36 @@
-<mat-sidenav-container class="sidenav-container">
-
+<mat-sidenav-container>
+  
   <mat-sidenav #sidenav mode="over" class="mobile-sidenav">
-    <a mat-list-item href="#sobremim" (click)="sidenav.close()">Sobre</a>
-    <a mat-list-item href="#projetos" (click)="sidenav.close()">Projetos</a>
-    <a mat-list-item href="#Conhecimentos" (click)="sidenav.close()">Conhecimentos</a>
+    <nav class="mobile-links">
+      <a href="#sobremim" (click)="sidenav.close()">Sobre</a>
+      <a href="#projetos" (click)="sidenav.close()">Projetos</a>
+      <a href="#Conhecimentos" (click)="sidenav.close()">Conhecimentos</a>
+    </nav>
   </mat-sidenav>
 
   <mat-sidenav-content>
+    
     <mat-toolbar class="custom-toolbar">
-      <button mat-icon-button (click)="sidenav.toggle()" class="menu-button">
-        <mat-icon>menu</mat-icon>
-      </button>
+      <div class="logo-container">
+        <span class="logo">Luis Henrique</span>
+        <span class="role">Full Stack Developer</span>
+      </div>
 
-      <span class="logo">Meu Portfólio</span>
       <span class="spacer"></span>
 
       <nav class="desktop-links">
-        <a mat-button href="#sobremim">Sobre</a>
-        <a mat-button href="#projetos">Projetos</a>
-        <a mat-button href="#Conhecimentos">Conhecimentos</a>
-        <a mat-stroked-button color="primary" class="contact-btn" href="#sobremim">
-          Contato
-        </a>
+        <a href="#sobremim">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#Conhecimentos">Conhecimentos</a>
+        <a href="#contato" class="contact-btn">Contato</a>
       </nav>
+
+      <button mat-icon-button (click)="sidenav.toggle()" class="menu-button">
+        <mat-icon>menu</mat-icon>
+      </button>
     </mat-toolbar>
+
+    <router-outlet></router-outlet>
+
   </mat-sidenav-content>
 </mat-sidenav-container>
